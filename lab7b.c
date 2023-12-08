@@ -42,8 +42,7 @@ int dequeue(){
     }
     int data=head->info;
     //pointer to delete the first node
-    struct node* ptr=malloc(sizeof(struct node));
-    ptr=head;
+    struct node* ptr=head;
     head=head->next;
     free(ptr);
     ptr=NULL;
