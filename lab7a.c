@@ -30,6 +30,7 @@ void push(int n){
     ptr->info=n;ptr->next=NULL;
     if(head==NULL){
         head=ptr;
+        return;
     }
     ptr->next=head;
     head=ptr;
