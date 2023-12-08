@@ -30,6 +30,7 @@ void push(int n){
     ptr->info=n;ptr->next=NULL;
     if(head==NULL){
         head=ptr;
+        return;
     }
     ptr->next=head;
     head=ptr;
@@ -42,8 +43,7 @@ int pop(){
     }
     int data=head->info;
     //pointer to delete the first node
-    struct node* ptr=malloc(sizeof(struct node));
-    ptr=head;
+    struct node* ptr=head;    
     head=head->next;
     free(ptr);
     ptr=NULL;
