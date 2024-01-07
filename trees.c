@@ -76,8 +76,8 @@ struct node* delete(struct node* root,int data){
     if(data>root->info){
         root->right=delete(root->right,data);
     }
-    else if(data>root->info){
-        root->left=delete(root->right,data);
+    else if(data<root->info){
+        root->left=delete(root->left,data);
     }
     //node found then check what type of node it is
     else{
