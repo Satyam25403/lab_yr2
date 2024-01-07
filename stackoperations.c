@@ -14,14 +14,32 @@ int isempty();      //return 0 or 1
 
 
 int main(){
-    push(3);
-    push(9);
-    push(67);
-    push(78);
-    print();
-    printf("%d\n",pop());
-    print();
-    return 0;
+    int option,input;
+    do{
+        printf("1.push\n2.pop\n3.print\n4.exit\n");
+        printf("enter a choice:");
+        scanf("%d",&option);
+        switch(option){
+            case 1:
+                printf("enter an element to push:");
+                scanf("%d",&input);
+                push(input);
+                break;
+            case 2:
+                printf("popped element is:%d\n",pop());
+                break;
+            case 3:
+                printf("contents of stack:");
+                print();
+                break;
+            case 4:
+                printf("terminating program.......");
+                break;
+            default:
+                printf("enter a valid option\n");
+                break;
+        }
+    }while(option!=4);
 }
 
 
